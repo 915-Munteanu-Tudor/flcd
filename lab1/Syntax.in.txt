@@ -1,20 +1,20 @@
-program = "begin" ";" decllist cmpdstmt end ";"
+program = "begin" ";" decllist cmpdstmt "end" ";"
 decllist = {declaration}
-declaration = "declare as " type ":" {IDENTIFIER} ";"
+declaration = "declare as " type ":" {identifier} ";"
 type = type1 | arraydecl
 type1 = "boolean" | "character" | "int" | “string”
-arraydecl = "list" "[" nr "]" "OF" type1
+arraydecl = "list" "[" nr "]" "of" type1
 cmpdstmt = stmtlist
 stmtlist = {stmt}
 stmt = simplstmt | structstmt
 simplstmt = assignstmt | iostmt
-assignstmt = IDENTIFIER "=" expression ";" | indexidentif "=" expression ";"
+assignstmt = identifier "=" expression ";" | indexidentif "=" expression ";"
 expression = expression ("+" | "-") term | term
 term = term ("*" | "/" | "%") factor | factor
-factor = "(" expression ")" | IDENTIFIER | int | indexidentif | const
-indexidentif = IDENTIFIER "[" int "]"
+factor = "(" expression ")" | identifier | int | indexidentif | const
+indexidentif = identifier "[" int "]"
 iostmt = readstmt | writestmt
-readstmt = "read" "(" IDENTIFIER ")" ";"
+readstmt = "read" "(" identifier ")" ";"
 writestmt = "write" "(" expression ")" ";"
 structstmt = ifstmt | whilestmt | forstmt
 ifstmt = "verify" "(" condition ")" "{" cmpdstmt "}" {"elverify" "(" condition ")" "{" cmpdstmt "}" } ["else" "{" cmpdstmt "}" ]

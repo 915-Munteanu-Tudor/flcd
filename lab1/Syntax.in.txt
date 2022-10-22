@@ -1,0 +1,27 @@
+program = "begin" ";" decllist cmpdstmt end ";"
+decllist = {declaration}
+declaration = "declare as " type ":" {IDENTIFIER} ";"
+type = type1 | arraydecl
+type1 = "boolean" | "character" | "int" | “string”
+arraydecl = "list" "[" nr "]" "OF" type1
+cmpdstmt = stmtlist
+stmtlist = {stmt}
+stmt = simplstmt | structstmt
+simplstmt = assignstmt | iostmt
+assignstmt = IDENTIFIER "=" expression ";" | indexidentif "=" expression ";"
+expression = expression ("+" | "-") term | term
+term = term ("*" | "/" | "%") factor | factor
+factor = "(" expression ")" | IDENTIFIER | int | indexidentif | const
+indexidentif = IDENTIFIER "[" int "]"
+iostmt = readstmt | writestmt
+readstmt = "read" "(" IDENTIFIER ")" ";"
+writestmt = "write" "(" expression ")" ";"
+structstmt = ifstmt | whilestmt | forstmt
+ifstmt = "verify" "(" condition ")" "{" cmpdstmt "}" {"elverify" "(" condition ")" "{" cmpdstmt "}" } ["else" "{" cmpdstmt "}" ]
+whilestmt = "while" "(" condition ")" "{" cmpdstmt "}"
+forstmt = "for" forhead "{" cmpdstmt "}"
+forhead = "(" "int" assignstmt ";" condition ";" assignstmt ")"
+condition = cond | cond logical cond | "!" cond
+cond = expression RELATION expression
+RELATION = "<" | "<=" | "==" | "!=" | ">=" | ">"
+logical = "and" | "or"

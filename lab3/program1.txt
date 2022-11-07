@@ -1,0 +1,12 @@
+begin;
+declare as int: a, sum=0, n;
+declare as boolean: z=True;
+read(n);
+while(n>=0)
+{
+read(a);
+sum = sum + a;
+n = n - 1;
+}
+write(sum)
+end; 

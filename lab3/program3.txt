@@ -1,0 +1,19 @@
+begin;
+declare as int: a,b;
+read(a);
+read(b);
+verify(a == 0)
+{write(b);}
+verify(b == 0)
+{write(a);}
+verify(a==b)
+{write(a);}
+while(a!=b)
+{
+verify(a>b)
+{a = a - b;}
+else
+{b = b - a;}
+}
+write(a);
+end;

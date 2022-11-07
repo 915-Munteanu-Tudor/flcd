@@ -1,0 +1,99 @@
+----------  ------
+begin       -1
+;           -1
+declare     -1
+as          -1
+int         -1
+:           -1
+identifier  (2, 0)
+,           -1
+identifier  (3, 0)
+;           -1
+read        -1
+(           -1
+identifier  (2, 0)
+)           -1
+;           -1
+read        -1
+(           -1
+identifier  (3, 0)
+)           -1
+;           -1
+verify      -1
+(           -1
+identifier  (2, 0)
+==          -1
+constant    (0, 0)
+)           -1
+{           -1
+write       -1
+(           -1
+identifier  (3, 0)
+)           -1
+;           -1
+}           -1
+verify      -1
+(           -1
+identifier  (3, 0)
+==          -1
+constant    (0, 0)
+)           -1
+{           -1
+write       -1
+(           -1
+identifier  (2, 0)
+)           -1
+;           -1
+}           -1
+verify      -1
+(           -1
+identifier  (2, 0)
+==          -1
+identifier  (3, 0)
+)           -1
+{           -1
+write       -1
+(           -1
+identifier  (2, 0)
+)           -1
+;           -1
+}           -1
+while       -1
+(           -1
+identifier  (2, 0)
+!=          -1
+identifier  (3, 0)
+)           -1
+{           -1
+verify      -1
+(           -1
+identifier  (2, 0)
+>           -1
+identifier  (3, 0)
+)           -1
+{           -1
+identifier  (2, 0)
+=           -1
+identifier  (2, 0)
+-           -1
+identifier  (3, 0)
+;           -1
+}           -1
+else        -1
+{           -1
+identifier  (3, 0)
+=           -1
+identifier  (3, 0)
+-           -1
+identifier  (2, 0)
+;           -1
+}           -1
+}           -1
+write       -1
+(           -1
+identifier  (2, 0)
+)           -1
+;           -1
+end         -1
+;           -1
+----------  ------

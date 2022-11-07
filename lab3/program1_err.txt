@@ -1,0 +1,13 @@
+begin;
+declare as int: 1a, 2b, c;
+declare as string: "aa;
+read(a);
+read(b);
+read(c);
+verify(a>=b and b>=c)
+{write(a);}
+elverify(b>=a and a>=c)
+{write(b);}
+elverify(c>=a and a>=b)
+{write(c);}
+end;

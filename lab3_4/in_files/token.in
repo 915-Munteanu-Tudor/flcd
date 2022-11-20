@@ -33,6 +33,7 @@ write
 int
 string
 boolean
+character
 verify
 elverify
 else

@@ -1,6 +1,7 @@
 begin;
 declare as int: a, sum=0, n;
 declare as boolean: z=True;
+
 read(n);
 while(n>=0)
 {

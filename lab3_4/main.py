@@ -1,3 +1,4 @@
+from Console import Console
 from Scanner import Scanner
 from SymbolTable import SymbolTable
 
@@ -9,7 +10,10 @@ if __name__ == '__main__':
     # print(ST.add("bc"))
     # print(ST.__str__())
 
-    scanner = Scanner("program3.txt")
+    # console = Console('in_files/FA.in')
+    # console.run()
+
+    scanner = Scanner('in_files/program3.txt')
     try:
         scanner.scan()
         scanner.write_pif_and_st_files()

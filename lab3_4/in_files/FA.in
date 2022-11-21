@@ -1,7 +1,7 @@
 Q = A B C
 E = 0 1
 q0 = B
-F = B C
+F = A C
 S =
     B,0 = B
     B,1 = A
